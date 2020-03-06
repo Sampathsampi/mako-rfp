@@ -1,0 +1,14 @@
+.header{
+  background: #FF8100!important;
+  }
+  #ticket-submit-section .hc-nav {
+    background-color: #FF8100!important;
+}
+.knowledge-dropdown-indicator{
+  color:#FF8100!important;
+  float:right;
+  margin-top:7px
+}
+#ticket-submit-section .hc-nav a {
+    color: #FF8100!important;
+}
