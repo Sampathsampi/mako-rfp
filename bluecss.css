@@ -22,3 +22,56 @@ a.banner-nav-holder {
 .ellipsis a {
     color: #107cd5!important;
 }
+button.btn, input[type="submit"].btn {
+    background: #107CD5!important;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: #107CD5!important;
+}
+.alt-login-button .btn {
+background: #107CD5;
+}
+.freshid_login .agent-login-link .agent-login-icon{
+    display: none!important;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #107CD5;
+}
+.search-results-list li {
+    border-left: 7px solid #107CD5!important;
+}
+.solution-dropdown-plus{
+    color: #107CD5;
+}
+.c-article-row {
+    border-left: 5px solid #107CD5!important;
+}
+.faq-topic-icon {
+    color: #107CD5;
+}
+.fc-article-show {
+    border-left: 7px solid #107CD5;
+}
+span#article_thumbs_up {
+    border: 2px solid #107CD5;
+    color: #107CD5;
+}
+.fc-solution-category .cs-g {
+    border-left: 9px solid #107CD5;
+}
+.fc-discussion-category .cs-g {
+    border-left: 7px solid #107CD5;
+}
+.nav-pills>li.active>a{
+    background-color:#107CD5;
+}
+.c-user-thumb {
+    border-left: 7px solid #107CD5 !important;
+}
+.topic-content {
+  border-left: 7px solid #107CD5;
+}
+#ticket-sidebar {
+    border-left: 6px solid #107CD5
+}
