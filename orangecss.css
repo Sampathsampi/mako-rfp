@@ -19,3 +19,6 @@ a.banner-nav-holder {
 .fc-community-content .cs-g {
     border-left: 7px solid #FF8100!important;
 }
+.ellipsis a {
+    color: #FF8100!important;
+}
