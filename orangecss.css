@@ -36,7 +36,7 @@ background: #ff8100;
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     color: #fff;
-    background-color: #ff8100;
+    background-color: #ff8100!important;
 }
 .search-results-list li {
     border-left: 7px solid #ff8100!important;
@@ -51,27 +51,27 @@ background: #ff8100;
     color: #ff8100;
 }
 .fc-article-show {
-    border-left: 7px solid #ff8100;
+    border-left: 7px solid #ff8100!important;
 }
 span#article_thumbs_up {
-    border: 2px solid #ff8100;
+    border: 2px solid #ff8100!important;
     color: #ff8100;
 }
 .fc-solution-category .cs-g {
-    border-left: 9px solid #ff8100;
+    border-left: 9px solid #ff8100!important;
 }
 .fc-discussion-category .cs-g {
-    border-left: 7px solid #ff8100;
+    border-left: 7px solid #ff8100!important;
 }
 .nav-pills>li.active>a{
-    background-color:#ff8100;
+    background-color:#ff8100!important;
 }
 .c-user-thumb {
     border-left: 7px solid #ff8100 !important;
 }
 .topic-content {
-  border-left: 7px solid #ff8100;
+  border-left: 7px solid #ff8100!important;
 }
 #ticket-sidebar {
-    border-left: 6px solid #ff8100
+    border-left: 6px solid #ff8100!important;
 }
