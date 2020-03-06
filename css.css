@@ -3,8 +3,8 @@
   }
   .banner{
     background-color:transparent!important;
-    border:0px; 
-    padding:20px 0;
+    border:0px!important; 
+    padding:20px 0!important;
   }
   h1.header_heading {
       color: white;
