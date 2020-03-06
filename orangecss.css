@@ -12,3 +12,7 @@
 #ticket-submit-section .hc-nav a {
     color: #FF8100!important;
 }
+a.banner-nav-holder {
+    background: white;
+    color: #FF8100 !important;
+}
