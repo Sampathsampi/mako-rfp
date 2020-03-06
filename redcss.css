@@ -16,3 +16,6 @@ a.banner-nav-holder {
     background: white;
     color: #d83d31 !important;
 }
+.fc-community-content .cs-g {
+    border-left: 7px solid #d83d31!important;
+}
