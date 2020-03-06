@@ -2,7 +2,7 @@
   background: #107CD5;
   }
   .banner{
-    background:transparent;
+    background-color:transparent!important;
     border:0px; 
     padding:20px 0;
   }
@@ -263,7 +263,7 @@ color:blue;
       color: black;
   }
   .footer{
-  background:#fff;
+  background-color:#fff!important;
   }
   /* search result */
   .nav-pills>li>a:hover {
