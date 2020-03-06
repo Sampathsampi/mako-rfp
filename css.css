@@ -124,6 +124,10 @@ color:blue;
       border-bottom: solid 0px #02b875;
     padding:0;
   }
+.heading.articles {
+    border-bottom: solid 0px #02b875;
+    padding: 0;
+}
   .c-wrapper {
       margin: 16px 0;
       box-shadow: none;
