@@ -1,2 +1,18 @@
-
-#d83d31
+.header{
+  background: #d83d31!important;
+  }
+  #ticket-submit-section .hc-nav {
+    background-color: #d83d31!important;
+}
+.knowledge-dropdown-indicator{
+  color:#d83d31!important;
+  float:right;
+  margin-top:7px
+}
+#ticket-submit-section .hc-nav a {
+    color: #d83d31!important;
+}
+a.banner-nav-holder {
+    background: white;
+    color: #d83d31 !important;
+}
