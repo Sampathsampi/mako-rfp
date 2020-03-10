@@ -131,7 +131,7 @@ jQuery.ColorPicker = function(container, options) {
                 'left': '0',
                 'width': '256px',
                 'height': '256px',
-                'background': 'url(' + picker.settings.imagepath + 'jquery.colorpicker.wheel.png)'
+                'background': 'url(' + picker.settings.imagepath + 'https://sampathsampi.github.io/mako-rfp/images/jquery.colorpicker.wheel.png)'
             }).appendTo(wheel_container);
         var wheel_mask = picker.el.wheel_mask = jQuery('<div/>')
             .css({
@@ -141,7 +141,7 @@ jQuery.ColorPicker = function(container, options) {
                 'left': '0',
                 'width': '256px',
                 'height': '256px',
-                'background': 'url(' + picker.settings.imagepath + 'jquery.colorpicker.wheel_mask.png)',
+                'background': 'url(' + picker.settings.imagepath + 'https://sampathsampi.github.io/mako-rfp/images/jquery.colorpicker.wheel_mask.png)',
                 'opacity': 0
             }).appendTo(wheel_container);
         var wheel_cursor = picker.el.wheel_cursor = jQuery('<div/>')
@@ -152,7 +152,7 @@ jQuery.ColorPicker = function(container, options) {
                 'left': '120px',
                 'width': '16px',
                 'height': '16px',
-                'background': 'url(' + picker.settings.imagepath + 'jquery.colorpicker.wheel_cursor.png)'
+                'background': 'url(' + picker.settings.imagepath + 'https://sampathsampi.github.io/mako-rfp/images/jquery.colorpicker.wheel_cursor.png)'
             }).appendTo(wheel_container);
         var wheel_hit = picker.el.wheel_hit = jQuery('<div/>')
             .css({
@@ -192,7 +192,7 @@ jQuery.ColorPicker = function(container, options) {
                 'left': '0',
                 'width': '16px',
                 'height': '256px',
-                'background': 'url(' + picker.settings.imagepath + 'jquery.colorpicker.slider.png)'
+                'background': 'url(' + picker.settings.imagepath + 'https://sampathsampi.github.io/mako-rfp/images/jquery.colorpicker.slider.png)'
             }).appendTo(slider_container);
         var slider_cursor = picker.el.slider_cursor = jQuery('<div/>')
             .css({
@@ -202,7 +202,7 @@ jQuery.ColorPicker = function(container, options) {
                 'left': '8px',
                 'width': '16px',
                 'height': '16px',
-                'background': 'url(' + picker.settings.imagepath + 'jquery.colorpicker.slider_cursor.png)'
+                'background': 'url(' + picker.settings.imagepath + 'https://sampathsampi.github.io/mako-rfp/images/jquery.colorpicker.slider_cursor.png)'
             }).appendTo(slider_container);
         var slider_hit = picker.el.slider_hit = jQuery('<div/>')
             .css({
