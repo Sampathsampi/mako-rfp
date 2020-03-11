@@ -2,7 +2,7 @@
      --mycolor:yellow;
     }
 .header{
-  background: --mycolor!important;
+  background: var(--mycolor)!important;
   }
   #ticket-submit-section .hc-nav {
     background-color: #d83d31!important;
