@@ -1,5 +1,5 @@
 html {
-    --mycolor:#d83d31;
+    --mycolor:#d83d31!important;
    }
 .header{
  background: var(--mycolor)!important;
