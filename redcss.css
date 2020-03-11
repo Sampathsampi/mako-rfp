@@ -1,5 +1,8 @@
+:root {
+     --mycolor:yellow;
+    }
 .header{
-  background: #d83d31!important;
+  background: --mycolor!important;
   }
   #ticket-submit-section .hc-nav {
     background-color: #d83d31!important;
