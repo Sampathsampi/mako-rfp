@@ -16,11 +16,11 @@
     // Browser globals
     factory(jQuery);
   }
-}(function (jQuery) {
+}(function ($) {
   'use strict';
 
   // Defaults
-  jQuery.minicolors = {
+  $.minicolors = {
     defaults: {
       animationSpeed: 50,
       animationEasing: 'swing',
@@ -44,94 +44,94 @@
   };
 
   // Public methods
-  jQuery.extend(jQuery.fn, {
+  $.extend($.fn, {
     minicolors: function(method, data) {
 
       switch(method) {
       // Destroy the control
       case 'destroy':
-        jQuery(this).each(function() {
-          destroy(jQuery(this));
+        $(this).each(function() {
+          destroy($(this));
         });
-        return jQuery(this);
+        return $(this);
 
       // Hide the color picker
       case 'hide':
         hide();
-        return jQuery(this);
+        return $(this);
 
       // Get/set opacity
       case 'opacity':
         // Getter
         if(data === undefined) {
           // Getter
-          return jQuery(this).attr('data-opacity');
+          return $(this).attr('data-opacity');
         } else {
           // Setter
-          jQuery(this).each(function() {
-            updateFromInput(jQuery(this).attr('data-opacity', data));
+          $(this).each(function() {
+            updateFromInput($(this).attr('data-opacity', data));
           });
         }
-        return jQuery(this);
+        return $(this);
 
       // Get an RGB(A) object based on the current color/opacity
       case 'rgbObject':
-        return rgbObject(jQuery(this), method === 'rgbaObject');
+        return rgbObject($(this), method === 'rgbaObject');
 
       // Get an RGB(A) string based on the current color/opacity
       case 'rgbString':
       case 'rgbaString':
-        return rgbString(jQuery(this), method === 'rgbaString');
+        return rgbString($(this), method === 'rgbaString');
 
       // Get/set settings on the fly
       case 'settings':
         if(data === undefined) {
-          return jQuery(this).data('minicolors-settings');
+          return $(this).data('minicolors-settings');
         } else {
           // Setter
-          jQuery(this).each(function() {
-            var settings = jQuery(this).data('minicolors-settings') || {};
-            destroy(jQuery(this));
-            jQuery(this).minicolors(jQuery.extend(true, settings, data));
+          $(this).each(function() {
+            var settings = $(this).data('minicolors-settings') || {};
+            destroy($(this));
+            $(this).minicolors($.extend(true, settings, data));
           });
         }
-        return jQuery(this);
+        return $(this);
 
       // Show the color picker
       case 'show':
-        show(jQuery(this).eq(0));
-        return jQuery(this);
+        show($(this).eq(0));
+        return $(this);
 
       // Get/set the hex color value
       case 'value':
         if(data === undefined) {
           // Getter
-          return jQuery(this).val();
+          return $(this).val();
         } else {
           // Setter
-          jQuery(this).each(function() {
+          $(this).each(function() {
             if(typeof(data) === 'object' && data !== null) {
               if(data.opacity !== undefined) {
-                jQuery(this).attr('data-opacity', keepWithin(data.opacity, 0, 1));
+                $(this).attr('data-opacity', keepWithin(data.opacity, 0, 1));
               }
               if(data.color) {
-                jQuery(this).val(data.color);
+                $(this).val(data.color);
               }
             } else {
-              jQuery(this).val(data);
+              $(this).val(data);
             }
-            updateFromInput(jQuery(this));
+            updateFromInput($(this));
           });
         }
-        return jQuery(this);
+        return $(this);
 
       // Initializes the control
       default:
         if(method !== 'create') data = method;
-        jQuery(this).each(function() {
-          init(jQuery(this), data);
+        $(this).each(function() {
+          init($(this), data);
         });
-        return jQuery(this);
+        return $(this);
 
       }
 
@@ -140,8 +140,8 @@
 
   // Initialize input elements
   function init(input, settings) {
-    var minicolors = jQuery('<div class="minicolors" />');
-    var defaults = jQuery.minicolors.defaults;
+    var minicolors = $('<div class="minicolors" />');
+    var defaults = $.minicolors.defaults;
     var name;
     var size;
     var swatches;
@@ -154,7 +154,7 @@
     if(input.data('minicolors-initialized')) return;
 
     // Handle settings
-    settings = jQuery.extend(true, {}, defaults, settings);
+    settings = $.extend(true, {}, defaults, settings);
 
     // The wrapper
     minicolors
@@ -163,7 +163,7 @@
 
     // Custom positioning
     if(settings.position !== undefined) {
-      jQuery.each(settings.position.split(' '), function() {
+      $.each(settings.position.split(' '), function() {
         minicolors.addClass('minicolors-position-' + this);
       });
     }
@@ -213,11 +213,11 @@
     // Swatches
     if(settings.swatches && settings.swatches.length !== 0) {
       panel.addClass('minicolors-with-swatches');
-      swatches = jQuery('<ul class="minicolors-swatches"></ul>')
+      swatches = $('<ul class="minicolors-swatches"></ul>')
         .appendTo(panel);
       for(i = 0; i < settings.swatches.length; ++i) {
         // allow for custom objects as swatches
-        if(jQuery.type(settings.swatches[i]) === 'object') {
+        if($.type(settings.swatches[i]) === 'object') {
           name = settings.swatches[i].name;
           swatch = settings.swatches[i].color;
         } else {
@@ -226,7 +226,7 @@
         }
         swatchString = swatch;
         swatch = isRgb(swatch) ? parseRgb(swatch, true) : hex2rgb(parseHex(swatch, true));
-        jQuery('<li class="minicolors-swatch minicolors-sprite"><span class="minicolors-swatch-color" title="' + name + '"></span></li>')
+        $('<li class="minicolors-swatch minicolors-sprite"><span class="minicolors-swatch-color" title="' + name + '"></span></li>')
           .appendTo(swatches)
           .data('swatch-color', swatchString)
           .find('.minicolors-swatch-color')
@@ -292,8 +292,8 @@
 
   // Hides all dropdown panels
   function hide() {
-    jQuery('.minicolors-focus').each(function() {
-      var minicolors = jQuery(this);
+    $('.minicolors-focus').each(function() {
+      var minicolors = $(this);
       var input = minicolors.find('.minicolors-input');
       var panel = minicolors.find('.minicolors-panel');
       var settings = input.data('minicolors-settings');
@@ -315,7 +315,7 @@
   function move(target, event, animate) {
     var input = target.parents('.minicolors').find('.minicolors-input');
     var settings = input.data('minicolors-settings');
-    var picker = target.find('[classjQuery=-picker]');
+    var picker = target.find('[class$=-picker]');
     var offsetX = target.offset().left;
     var offsetY = target.offset().top;
     var x = Math.round(event.pageX - offsetX);
@@ -401,9 +401,9 @@
     var opacitySlider = minicolors.find('.minicolors-opacity-slider');
 
     // Picker objects
-    var gridPicker = grid.find('[classjQuery=-picker]');
-    var sliderPicker = slider.find('[classjQuery=-picker]');
-    var opacityPicker = opacitySlider.find('[classjQuery=-picker]');
+    var gridPicker = grid.find('[class$=-picker]');
+    var sliderPicker = slider.find('[class$=-picker]');
+    var opacityPicker = opacitySlider.find('[class$=-picker]');
 
     // Picker positions
     var gridPos = getCoords(gridPicker, grid);
@@ -582,9 +582,9 @@
     var opacitySlider = minicolors.find('.minicolors-opacity-slider');
 
     // Picker objects
-    var gridPicker = grid.find('[classjQuery=-picker]');
-    var sliderPicker = slider.find('[classjQuery=-picker]');
-    var opacityPicker = opacitySlider.find('[classjQuery=-picker]');
+    var gridPicker = grid.find('[class$=-picker]');
+    var sliderPicker = slider.find('[class$=-picker]');
+    var opacityPicker = opacitySlider.find('[class$=-picker]');
 
     // Determine hex/HSB values
     if(isRgb(input.val())) {
@@ -604,12 +604,12 @@
     hsb = hex2hsb(hex);
 
     // Get array of lowercase keywords
-    keywords = !settings.keywords ? [] : jQuery.map(settings.keywords.split(','), function(a) {
-      return jQuery.trim(a.toLowerCase());
+    keywords = !settings.keywords ? [] : $.map(settings.keywords.split(','), function(a) {
+      return $.trim(a.toLowerCase());
     });
 
     // Set color string
-    if(input.val() !== '' && jQuery.inArray(input.val().toLowerCase(), keywords) > -1) {
+    if(input.val() !== '' && $.inArray(input.val().toLowerCase(), keywords) > -1) {
       value = convertCase(input.val());
     } else {
       value = isRgb(input.val()) ? parseRgb(input.val()) : hex;
@@ -778,26 +778,26 @@
   // Generates an RGB(A) object based on the input's value
   function rgbObject(input) {
     var rgb,
-      opacity = jQuery(input).attr('data-opacity');
-    if( isRgb(jQuery(input).val()) ) {
-      rgb = parseRgb(jQuery(input).val(), true);
+      opacity = $(input).attr('data-opacity');
+    if( isRgb($(input).val()) ) {
+      rgb = parseRgb($(input).val(), true);
     } else {
-      var hex = parseHex(jQuery(input).val(), true);
+      var hex = parseHex($(input).val(), true);
       rgb = hex2rgb(hex);
     }
     if( !rgb ) return null;
-    if( opacity !== undefined ) jQuery.extend(rgb, { a: parseFloat(opacity) });
+    if( opacity !== undefined ) $.extend(rgb, { a: parseFloat(opacity) });
     return rgb;
   }
 
   // Generates an RGB(A) string based on the input's value
   function rgbString(input, alpha) {
     var rgb,
-      opacity = jQuery(input).attr('data-opacity');
-    if( isRgb(jQuery(input).val()) ) {
-      rgb = parseRgb(jQuery(input).val(), true);
+      opacity = $(input).attr('data-opacity');
+    if( isRgb($(input).val()) ) {
+      rgb = parseRgb($(input).val(), true);
     } else {
-      var hex = parseHex(jQuery(input).val(), true);
+      var hex = parseHex($(input).val(), true);
       rgb = hex2rgb(hex);
     }
     if( !rgb ) return null;
@@ -937,7 +937,7 @@
       rgb.g.toString(16),
       rgb.b.toString(16)
     ];
-    jQuery.each(hex, function(nr, val) {
+    $.each(hex, function(nr, val) {
       if(val.length === 1) hex[nr] = '0' + val;
     });
     return '#' + hex.join('');
@@ -994,51 +994,51 @@
   }
 
   // Handle events
-  jQuery([document])
+  $([document])
     // Hide on clicks outside of the control
     .on('mousedown.minicolors touchstart.minicolors', function(event) {
-      if(!jQuery(event.target).parents().add(event.target).hasClass('minicolors')) {
+      if(!$(event.target).parents().add(event.target).hasClass('minicolors')) {
         hide();
       }
     })
     // Start moving
     .on('mousedown.minicolors touchstart.minicolors', '.minicolors-grid, .minicolors-slider, .minicolors-opacity-slider', function(event) {
-      var target = jQuery(this);
+      var target = $(this);
       event.preventDefault();
-      jQuery(event.delegateTarget).data('minicolors-target', target);
+      $(event.delegateTarget).data('minicolors-target', target);
       move(target, event, true);
     })
     // Move pickers
     .on('mousemove.minicolors touchmove.minicolors', function(event) {
-      var target = jQuery(event.delegateTarget).data('minicolors-target');
+      var target = $(event.delegateTarget).data('minicolors-target');
       if(target) move(target, event);
     })
     // Stop moving
     .on('mouseup.minicolors touchend.minicolors', function() {
-      jQuery(this).removeData('minicolors-target');
+      $(this).removeData('minicolors-target');
     })
     // Selected a swatch
     .on('click.minicolors', '.minicolors-swatches li', function(event) {
       event.preventDefault();
-      var target = jQuery(this), input = target.parents('.minicolors').find('.minicolors-input'), color = target.data('swatch-color');
+      var target = $(this), input = target.parents('.minicolors').find('.minicolors-input'), color = target.data('swatch-color');
       updateInput(input, color, getAlpha(color));
       updateFromInput(input);
     })
     // Show panel when swatch is clicked
     .on('mousedown.minicolors touchstart.minicolors', '.minicolors-input-swatch', function(event) {
-      var input = jQuery(this).parent().find('.minicolors-input');
+      var input = $(this).parent().find('.minicolors-input');
       event.preventDefault();
       show(input);
     })
     // Show on focus
     .on('focus.minicolors', '.minicolors-input', function() {
-      var input = jQuery(this);
+      var input = $(this);
       if(!input.data('minicolors-initialized')) return;
       show(input);
     })
     // Update value on blur
     .on('blur.minicolors', '.minicolors-input', function() {
-      var input = jQuery(this);
+      var input = $(this);
       var settings = input.data('minicolors-settings');
       var keywords;
       var hex;
@@ -1049,12 +1049,12 @@
       if(!input.data('minicolors-initialized')) return;
 
       // Get array of lowercase keywords
-      keywords = !settings.keywords ? [] : jQuery.map(settings.keywords.split(','), function(a) {
-        return jQuery.trim(a.toLowerCase());
+      keywords = !settings.keywords ? [] : $.map(settings.keywords.split(','), function(a) {
+        return $.trim(a.toLowerCase());
       });
 
       // Set color string
-      if(input.val() !== '' && jQuery.inArray(input.val().toLowerCase(), keywords) > -1) {
+      if(input.val() !== '' && $.inArray(input.val().toLowerCase(), keywords) > -1) {
         value = input.val();
       } else {
         // Get RGBA values for easy conversion
@@ -1097,7 +1097,7 @@
     })
     // Handle keypresses
     .on('keydown.minicolors', '.minicolors-input', function(event) {
-      var input = jQuery(this);
+      var input = $(this);
       if(!input.data('minicolors-initialized')) return;
       switch(event.which) {
       case 9: // tab
@@ -1112,13 +1112,13 @@
     })
     // Update on keyup
     .on('keyup.minicolors', '.minicolors-input', function() {
-      var input = jQuery(this);
+      var input = $(this);
       if(!input.data('minicolors-initialized')) return;
       updateFromInput(input, true);
     })
     // Update on paste
     .on('paste.minicolors', '.minicolors-input', function() {
-      var input = jQuery(this);
+      var input = $(this);
       if(!input.data('minicolors-initialized')) return;
       setTimeout(function() {
         updateFromInput(input, true);
