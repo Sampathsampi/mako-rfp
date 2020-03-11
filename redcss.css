@@ -1,80 +1,80 @@
 :root {
-     --mycolor:yellow;
-    }
+    --mycolor:#d83d31;
+   }
 .header{
-  background: var(--mycolor)!important;
-  }
-  #ticket-submit-section .hc-nav {
-    background-color: #d83d31!important;
+ background: var(--mycolor)!important;
+ }
+ #ticket-submit-section .hc-nav {
+   background-color: var(--mycolor)!important;
 }
 .knowledge-dropdown-indicator{
-  color:#d83d31!important;
-  float:right;
-  margin-top:7px;
+ color:var(--mycolor)!important;
+ float:right;
+ margin-top:7px;
 }
 #ticket-submit-section .hc-nav a {
-    color: #d83d31!important;
+   color: var(--mycolor)!important;
 }
 a.banner-nav-holder {
-    background: white;
-    color: #d83d31 !important;
+   background: white;
+   color: #d83d31 !important;
 }
 .fc-community-content .cs-g {
-    border-left: 7px solid #d83d31!important;
+   border-left: 7px solid var(--mycolor)!important;
 }
 .ellipsis a{
-color:#d83d31!important;
+color:var(--mycolor)!important;
 }
 button.btn, input[type="submit"].btn {
-    background: #d83d31!important;
+   background: var(--mycolor)!important;
 }
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
-    border-color: #d83d31!important;
+   border-color: var(--mycolor)!important;
 }
 .sign-up-with-us {
-background: #d83d31!important;
+background: var(--mycolor)!important;
 }
 .freshid_login .agent-login-link .agent-login-icon{
-    display: none!important;
+   display: none!important;
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-    color: #fff;
-    background-color: #d83d31!important;
+   color: #fff;
+   background-color: var(--mycolor)!important;
 }
 .search-results-list li {
-    border-left: 7px solid #d83d31!important;
+   border-left: 7px solid var(--mycolor)!important;
 }
 .solution-dropdown-plus{
-    color: #d83d31;
+   color: #d83d31;
 }
 .c-article-row {
-    border-left: 5px solid #d83d31!important;
+   border-left: 5px solid var(--mycolor)!important;
 }
 .faq-topic-icon {
-    color: #d83d31;
+   color: #d83d31;
 }
 .fc-article-show {
-    border-left: 7px solid #d83d31!important;
+   border-left: 7px solid var(--mycolor)!important;
 }
 span#article_thumbs_up {
-    border: 2px solid #d83d31!important;
-    color: #d83d31;
+   border: 2px solid var(--mycolor)!important;
+   color: #d83d31;
 }
 .fc-solution-category .cs-g {
-    border-left: 9px solid #d83d31!important;
+   border-left: 9px solid var(--mycolor)!important;
 }
 .fc-discussion-category .cs-g {
-    border-left: 7px solid #d83d31!important;
+   border-left: 7px solid var(--mycolor)!important;
 }
 .nav-pills>li.active>a{
-    background-color:#d83d31;
+   background-color:#d83d31;
 }
 .c-user-thumb {
-    border-left: 7px solid #d83d31 !important;
+   border-left: 7px solid #d83d31 !important;
 }
 .topic-content {
-  border-left: 7px solid #d83d31!important;
+ border-left: 7px solid var(--mycolor)!important;
 }
 #ticket-sidebar {
-    border-left: 6px solid #d83d31!important;
+   border-left: 6px solid var(--mycolor)!important;
 }
