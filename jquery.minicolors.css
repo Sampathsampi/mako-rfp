@@ -306,11 +306,11 @@
 /* Bootstrap theme */
 .minicolors-theme-bootstrap .minicolors-swatch {
   z-index: 2;
-  top: 3px;
+  top: 6px;
   left: 3px; /* LTR */
   width: 28px;
   height: 28px;
-  border-radius: 3px;
+  border-radius: 50%;
 }
 [dir=rtl] .minicolors-theme-bootstrap .minicolors-swatch {
   right: 3px;
