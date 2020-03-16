@@ -44,7 +44,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, .2);
   z-index: 99999;
   box-sizing: content-box;
-  display: block;
+  display: block!important;
 }
 
 .minicolors-panel.minicolors-visible {
