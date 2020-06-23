@@ -1,0 +1,413 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+header {
+  background: url(../img/mastheadbg.gif);
+}
+
+.collapse.show {
+  display: block;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.floating-left {
+  float: left;
+}
+
+body.body-section {
+  background: #333;
+}
+
+.responsive-header {
+  background: #fff;
+}
+
+.menu-button {
+  width: 50%;
+}
+
+.header-list {
+  list-style: none;
+  padding: 0;
+  width: 85%;
+  margin: 46px auto 0% 15%;
+  display: flex;
+  /* justify-content: space-evenly; */
+  color: #fff;
+}
+
+.header-list li {
+  border-right: 2px solid #ea9a2f;
+  margin-right: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header-list li a:hover {
+  text-decoration: none;
+  color: #ea9a2f;
+}
+
+.header-list li:nth-last-of-type(1) {
+  border: 0px solid;
+}
+
+.header-list li a {
+  color: #fff;
+  font-size: 10px;
+  padding-right: 20px;
+  padding-left: 0px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+}
+
+.header-list:hover {
+  text-decoration: none;
+  color: #ea9a2f;
+}
+
+.menu-button {
+  display: none;
+}
+
+.logo {
+  background: white;
+  width: 100%;
+  padding: 0 0 15px 0;
+}
+
+.logo img {
+  width: 100%;
+  object-fit: none;
+}
+
+.navbar-light .navbar-toggler {
+  background: #fff;
+  margin-top: 5px;
+}
+
+.creating-content {
+  padding-top: 29px;
+  width: 75%;
+  margin: auto;
+  font-size: 41px;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+}
+
+.creating-best {
+  background: url(../img/feature.jpg);
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: 100%;
+  font-family: 'Merriweather', serif;
+  /* background-position: 100% 94px; */
+  height: 700px;
+}
+.back-fixed{
+  background-attachment: fixed;
+}
+
+/* case study */
+
+h4.case-breadcrumbs {
+  padding-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.25;
+  letter-spacing: 0.8px;
+  color: #5e5e5e;
+}
+
+p.case-content {
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 2.14;
+  color: #333333;
+}
+
+h5.solution {
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  color: #246195;
+  font-size: 16px;
+}
+
+h5.solution a span {
+  padding-left: 10px;
+}
+
+h5.solution a {
+  display: flex;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  color: #246195;
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+
+h5.solution a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.case-study img {
+  margin-right: 5rem;
+}
+
+.grey-section {
+  background: #B8B8B8;
+  min-height: 311px;
+  padding: 23px 12% 23px 10px
+}
+
+section.case-study.grey-section {
+  position: absolute;
+  top: 33.5rem;
+  width: 83%;
+  margin: 50px 0 0 17%;
+  z-index: 10;
+}
+
+.testimonial img {
+  height: 900px;
+  object-fit: cover;
+}
+
+.testimonial-heading {
+  margin-bottom: 30px;
+  color: #6693ba;
+  font-size: 72px;
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+}
+
+.testimonial-content-section {
+  padding-top: 10%;
+  padding-left: 10%;
+}
+
+.testimonial-content {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2.24px;
+  width: 85%;
+  padding-left: 12%;
+  line-height: 2.14;
+}
+
+section.testimonial {
+  background: url(../img/accent_pencils.jpg);
+  background-size: auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 900px;
+  background-color: #333;
+}
+
+.gold-box {
+  background: #EB9B2B;
+  padding: 21px;
+}
+
+.gold-box h4 {
+  color: #985800;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  letter-spacing: 1.44px;
+}
+
+.gold-box-list {
+  list-style-type: disc;
+  line-height: 2.14;
+  color: #624825;
+  font-weight: normal;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0 25px;
+  font-size: 14px;
+}
+
+.gold-box-main {
+  position: absolute;
+  width: 100%;
+  margin-top: 13%;
+}
+
+.second-g-box {
+  padding-left: 4.5rem;
+}
+
+.accent-chairs {
+  margin-top: 15%
+}
+
+.economies div {
+  background: #ea9a2f;
+}
+
+.chairs {
+  background: url(../img/accent_chairs.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 12em 15px 22em;
+  display: flex;
+  justify-content: center;
+}
+
+.chairs img {
+  width: 100%;
+  height: auto
+}
+
+footer.row {
+  background: #444;
+  text-align: center;
+}
+
+footer.row div {
+  height: 100px;
+  padding: 1em 0;
+}
+
+footer div:first-child {
+  color: #f6c884;
+  font-size: 2em
+}
+footer div:first-child a{
+  color: #f6c884;
+}
+footer div:first-child a:hover{
+  transition: all 0.2s ease;
+  color: #f5b24e;
+  text-decoration: none;
+  
+}
+footer img:hover {
+  opacity: 0.7;
+}
+footer div:nth-child(2) {
+  background: #333;
+  color: #b7b7b7;
+  font-size: .8em;
+  text-align: left
+}
+
+footer div:nth-child(2) p {
+  padding-left: 1em;
+  margin: 0.8em 20%;
+  border-left: 3px solid #444
+}
+
+footer div:nth-child(3) {
+  background: #262728;
+}
+
+footer img {
+  margin: 1.2em auto
+}
+
+
+/* parallax */
+
+.digit {
+  opacity: 0;
+  -webkit-transform: translateX(-40px);
+  -moz-transform: translateX(-40px);
+  -ms-transform: translateX(-40px);
+  -o-transform: translateX(-40px);
+  transform: translateX(-40px);
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.digit.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.fade-ani {
+  opacity: 0;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.fade-up {
+  bottom: -50px;
+}
+
+.fade-down {
+  top: -50px;
+}
+
+.fade-left {
+  left: -50px;
+}
+
+.fade-right {
+  right: -50px;
+}
+
+.fade-in.showing {
+  opacity: 1;
+}
+
+.fade-up.showing {
+  bottom: 0px;
+  opacity: 1;
+}
+
+.fade-down.showing {
+  top: -0px;
+  opacity: 1;
+}
+
+.fade-left.showing {
+  left: -0px;
+  opacity: 1;
+}
+
+.fade-right.showing {
+  right: -0px;
+  opacity: 1;
+}
