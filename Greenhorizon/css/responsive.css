@@ -14,7 +14,6 @@ width: 69%;
 }
 @media (max-width:1024px) {
     .header-logo {
-
         left: -10%;
     }    
 }
@@ -22,6 +21,11 @@ width: 69%;
 
 }
 @media (max-width:768px) {
+    .coming-soon{
+        position: relative;
+        margin-left:0%;
+        font-size: 10px;
+      }
     ul.header-ul.header-ul-responsive.active {
         margin: 19% 0 auto auto;
     }
