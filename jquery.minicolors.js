@@ -361,9 +361,9 @@
     if (picker.animate) {
       picker
         .stop(true)
-        .animate(styles, duration, settings.animationEasing, function() {
-          updateFromControl(input, target);
-        });
+//         .animate(styles, duration, settings.animationEasing, function() {
+//           updateFromControl(input, target);
+//         });
     } else {
       picker
         .css(styles);
