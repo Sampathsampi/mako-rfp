@@ -7,9 +7,10 @@
 display: none;
 }
     .Domain img {
-        height: 51%;
-        border-radius: 50%;
-        width: 27%;
+       height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50px;
     }
 
     label.Domain:hover {
